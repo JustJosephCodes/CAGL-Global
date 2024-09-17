@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://cagl-landing-page/./src/index.js?");
+eval("const hamMenu = document.querySelector(\".ham-menu\");\r\nconst sideBar = document.querySelector(\".side-bar\")\r\nconst closeMenu = document.querySelector(\".close-wrapper\");\r\n\r\n\r\nhamMenu.addEventListener(\"click\", ()=>{\r\n  sideBar.style.right = \"0\";\r\n});\r\ncloseMenu.addEventListener(\"click\", ()=>{\r\n  sideBar.style.right = \"-450px\"\r\n})\r\n\r\n\r\n\n\n//# sourceURL=webpack://cagl-landing-page/./src/index.js?");
 
 /***/ })
 
