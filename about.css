@@ -117,7 +117,7 @@ h2{
 
 #about-our-vision{
   background: url(./images/engineer\ walking\ glass\ windows.svg);
-  background-size: 100%;
+  background-size: center;
   background-repeat: no-repeat;
   background-position: center center;
   color: var(--light);
@@ -133,7 +133,7 @@ h2{
   color: var(--dark);
   font-family: "Inter", sans-serif;
   text-align: center;
-  padding-bottom: 32px;
+  padding-bottom: 48px;
 }
 
 #team-gallery{
@@ -155,14 +155,17 @@ h2{
 
 .card:nth-child(2){
   background: url(./images/filler\ exec\ glasses.png);
+  background-repeat: no-repeat;
 }
 
 .card:nth-child(3){
   background: url(./images/filler\ exec\ female.png);
+  background-repeat: no-repeat;
 }
 
 .card:nth-child(4){
   background: url(./images/filler\ exec.png);
+  background-repeat: no-repeat;
 }
 
 .card-text{
@@ -241,7 +244,7 @@ footer .line {
 
 .side-bar {
   position: fixed;
-  right: -450px;
+  right: -45000px;
   top: 0;
   height: 100vh;
   width: 50%;
@@ -251,7 +254,6 @@ footer .line {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(201, 217, 203, 0.3);
   transition: right 500ms ease;
-  display: none;
 }
 
 .close-wrapper {
@@ -301,7 +303,10 @@ footer .line {
 
 }
 
-@media (max-width: 650px){
+@media (max-width: 750px){
+  h1{
+    font-size: 3rem;
+  }
   #contact-btn, nav{
     display: none;
   }
@@ -316,9 +321,36 @@ footer .line {
     background-position: center;
     background-size: cover;
     }
+  footer h3{
+    padding-left: 5.2vw;
+  }
   
-    #footer-wrapper {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1vh;
-    }
+  #footer-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vh;
+  }
+
+  #team-gallery{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .card{
+    margin-inline: auto;
+    width: 360px;
+    border-radius: 16px;
+  }
+  #about-our-vision,
+  #about-our-mission,
+  #about-our-values{
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 32px;
+    background-position: center;
+  }
+  #about-our-vision h2,
+  #about-our-mission h2,
+  #about-our-values h2{
+    padding-bottom: 32px;
+  }
 }
