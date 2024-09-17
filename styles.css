@@ -119,6 +119,14 @@ nav button{
   background-color: var(--primary);
 }
 
+button{
+  transition: all 200ms ease;
+}
+
+button:hover{
+  transform: scale(110%);
+}
+
 #introduction{
   display: flex;
   min-height: 100vh;
@@ -128,6 +136,9 @@ nav button{
 
 .ham-menu{
   display: none;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
 }
 
 .ham-menu img{
@@ -329,7 +340,7 @@ footer ul{
   gap: 16px;
 }
 
-footer li{
+li{
   list-style: none;
 }
 
@@ -477,3 +488,60 @@ footer .line{
   justify-content: center;
   padding-top: 32px;
 }
+
+.side-bar{
+  position: fixed;
+  right: -450px;
+  top: 0;
+  height: 100vh;
+  width: 50%;
+  background: rgba(201, 217, 203, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(201, 217, 203, 0.3);
+  transition: right 500ms ease;
+}
+
+.close-wrapper{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  margin-bottom: 2vh;
+  cursor: pointer;
+}
+
+.close-wrapper img{
+  width: 20px;
+}
+
+.next img{
+  width: 15px;
+}
+
+.white{
+  display: none;
+}
+
+.side-bar-item{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-inline: 3vw;
+  padding-block: 2.5vh;
+}
+
+.side-bar a{
+  transition: background-color 300ms ease;
+}
+
+.side-bar a:hover{
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.side-bar a:hover > .next{
+  display: none;
+}
+
